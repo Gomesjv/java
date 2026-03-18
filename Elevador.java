@@ -20,9 +20,6 @@ public class Elevador {
 
         if (portaEstaAberta) {
             System.out.println("A porta está aberta, feche a porta para subir");
-            
-                portaEstaAberta = false;
-                System.out.println("A porta foi fechada");
                 return;
         }
         andar++;
@@ -31,7 +28,7 @@ public class Elevador {
 
     public void descer() {
         System.out.println(andar);
-        if (andar < MinAndar) {
+        if (andar <= MinAndar) {
             System.out.println("Andar minimo é " + MinAndar);
             return;
         }
@@ -54,6 +51,8 @@ public class Elevador {
         portaEstaAberta = true;
         System.out.println("A porta foi aberta");
     }
+
+
     public void fecharPorta(){
         if (!portaEstaAberta){
             System.out.println("A porta ja esta fechada");
