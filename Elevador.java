@@ -12,7 +12,7 @@ public class Elevador {
     }
 
     public void subir() {
-        System.out.println(andar);
+        System.out.println("Andar atual: " + andar);
         if (andar > MaxAndar) {
             System.out.println("Andar maximo é " + MaxAndar);
             return;
@@ -27,7 +27,7 @@ public class Elevador {
     }
 
     public void descer() {
-        System.out.println(andar);
+        System.out.println("Andar atual: " + andar);
         if (andar <= MinAndar) {
             System.out.println("Andar minimo é " + MinAndar);
             return;
@@ -60,5 +60,9 @@ public class Elevador {
         }
         portaEstaAberta = false;
         System.out.println("A porta foi fechada");
+    }
+
+    public void statusPorta() {
+        System.out.println("Porta esta " + (portaEstaAberta ? "aberta" : "fechada"));
     }
 }
